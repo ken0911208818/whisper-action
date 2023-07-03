@@ -15,7 +15,27 @@ jobs:
         model: small
         youtube_url: https://www.youtube.com/watch?v=pTCxXZh6VyE
         output_format: txt,srt,csv
-        output_folder: youtube
+        output_folder: youtube/small
+        print_segment: true
+        debug: true
+
+    - name: speech to text
+      uses: ./
+      with:
+        model: medium
+        youtube_url: https://www.youtube.com/watch?v=pTCxXZh6VyE
+        output_format: txt,srt,csv
+        output_folder: youtube/medium
+        print_segment: true
+        debug: true
+
+    - name: speech to text
+      uses: ./
+      with:
+        model: large
+        youtube_url: https://www.youtube.com/watch?v=pTCxXZh6VyE
+        output_format: txt,srt,csv
+        output_folder: youtube/large
         print_segment: true
         debug: true
 
